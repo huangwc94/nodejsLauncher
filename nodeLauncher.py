@@ -12,7 +12,7 @@ class NodelauncherCommand(sublime_plugin.TextCommand):
   #  p.terminate()
 
   def launch(self):
-    regx = re.compile(" ")
-    cmd = "cmd.exe /K node " + regx.sub("\ ", self.view.file_name());
+    #regx = re.compile(" ")
+    cmd = "cmd.exe /K node " +"\""+sekf.view.file_name()+"\"" #regx.sub("\ ", self.view.file_name());
     p = Popen(cmd)
     #sublime_plugin.on_query_context(self, "ctrl+o+p", sublime.OP_EQUAL, endS, true)
